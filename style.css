@@ -85,7 +85,7 @@ body {
 
 .operator {
   border: none;
-  color: rgba(15, 250, 10, 1);
+  color: rgba(35, 135, 35, 1);
   /*box-shadow: inset -2px -2px 2px rgba(150, 250, 10, 0.8),
     inset 2px 2px 2px rgba(150, 250, 10, 0.8);*/
 }
