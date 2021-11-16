@@ -11,7 +11,7 @@ const calculator = {
 let result;
 //Digit input event handler function
 function inputDigit(digit) {
-  if (result !== undefined && calculator.awaitingSecondNumber === false) {
+  if (result && calculator.awaitingSecondNumber === false) {
     reset();
   }
   const displayValue = calculator.displayValue;
@@ -39,6 +39,7 @@ function inputOperator(operator) {
       secondNumber = parseFloat(calculator.displayValue);
       const result = evaluate(firstNumber, secondNumber, calculator.operator);
       calculator.displayValue = result;
+      calculator.awaitingSecondNumber = false;
     }
     return;
   }
