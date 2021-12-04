@@ -11,18 +11,26 @@ const calculator = {
 let result;
 //Digit input event handler function
 function inputDigit(digit) {
+<<<<<<< HEAD
   if (result && calculator.awaitingSecondNumber === false) {
     reset();
   }
+=======
+>>>>>>> 8de57a81a0fa1b0c6ee1bbffbad10746b223dcbc
   const displayValue = calculator.displayValue;
-  if (calculator.awaitingSecondNumber === true) {
-    calculator.displayValue = digit;
-    calculator.awaitingSecondNumber = false;
+  if (displayValue === result) {
+    reset();
   } else {
-    calculator.displayValue =
-      displayValue === '0' ? digit : displayValue + digit;
+    //const displayValue = calculator.displayValue;
+    if (calculator.awaitingSecondNumber === true) {
+      calculator.displayValue = digit;
+      calculator.awaitingSecondNumber = false;
+    } else {
+      calculator.displayValue =
+        displayValue === '0' ? digit : displayValue + digit;
+    }
+    console.log(calculator);
   }
-  console.log(calculator);
 }
 
 //Decimal input event handler function
