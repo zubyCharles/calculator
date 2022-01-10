@@ -11,12 +11,6 @@ const calculator = {
 let result;
 //Digit input event handler function
 function inputDigit(digit) {
-<<<<<<< HEAD
-  if (result && calculator.awaitingSecondNumber === false) {
-    reset();
-  }
-=======
->>>>>>> 8de57a81a0fa1b0c6ee1bbffbad10746b223dcbc
   const displayValue = calculator.displayValue;
   if (displayValue === result) {
     reset();
